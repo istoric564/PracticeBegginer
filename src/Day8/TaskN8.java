@@ -11,5 +11,6 @@ public class TaskN8 {
             sb.append(i).append(" ");
         }
         System.out.println(sb);
+
     }
 }
