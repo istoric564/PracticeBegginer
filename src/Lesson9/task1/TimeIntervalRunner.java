@@ -11,12 +11,19 @@ package Lesson9.task1;
  */
 public class TimeIntervalRunner {
     public static void main(String[] args) {
-        TimeInterval timeInterval = new TimeInterval(60,2,0);
-        System.out.println(timeInterval.totalSeconds());
+        TimeInterval timeInterval = createTimeInterval();
+
         TimeInterval timeInterval1 = new TimeInterval(123124);
         System.out.println(timeInterval1.totalSeconds());
+
         timeInterval1.print();
         TimeInterval sumIntervals = timeInterval.sum(timeInterval1);
         sumIntervals.print();
+    }
+
+    private static TimeInterval createTimeInterval() {
+        TimeInterval timeInterval = new TimeInterval(60,2,0);
+        System.out.println(timeInterval.totalSeconds());
+        return timeInterval;
     }
 }

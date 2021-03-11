@@ -1,15 +1,19 @@
 package Lesson9.task1;
 
 public class TimeInterval {
+    private static final int SECONDS_IN_MINUTE = 60;
+    private static final int MINUTES_IN_HOURS = 60;
+
     private int seconds;
     private int minutes;
     private int hours;
 
 
+
     public TimeInterval(int totalSeconds){
         this.hours = totalSeconds / 3600;
-        this.minutes = totalSeconds % 3600 / 60;
-        this.seconds = totalSeconds % 3600 % 60;
+        this.minutes = totalSeconds % 3600 / MINUTES_IN_HOURS;
+        this.seconds = totalSeconds % 3600 % SECONDS_IN_MINUTE;
     }
 
 
